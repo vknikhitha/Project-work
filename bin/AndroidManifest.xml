@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="device.device.aes"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="device.device.aes.ControllerApplication"
+        android:icon="@drawable/a"
+        android:label="SecreteMessage" >
+        <activity
+            android:name="device.device.aes.Main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.DELETE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="device.device.aes" />
+            </intent-filter>
+        </activity>
+        <activity android:name="device.device.aes.Registration" >
+        </activity>
+        <activity
+            android:name="device.device.aes.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="device.device.aes.UserViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="device.device.aes.StartPushNotification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="device.device.aes.DisplayMessage"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="device.device.aes" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="device.device.aes.GCMIntentService" />
+
+        <activity
+            android:name="register.login.encrypt.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="register.login.encrypt.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+         <activity
+            android:name="device.device.aes.ViewMsg"
+            android:label="@string/title_activity_view_msg" >
+        </activity>
+        <activity
+            android:name="device.device.aes.Splash_Activity"
+            android:label="SecreteMessage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       
+    </application>
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="device.device.aes.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="device.device.aes.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+
+</manifest>

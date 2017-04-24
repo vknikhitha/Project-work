@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8D8D8"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="200dip" >
+
+        <TextView
+            android:id="@+id/lblMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:src="@drawable/user_thumb" />
+
+            <TextView
+                android:id="@+id/sendTo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="Send To : "
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/defaultText" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:text="Message:"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/txtMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dip"
+               android:singleLine="false"
+                android:layout_marginBottom="5dip"
+                android:height="60dp"
+                android:background="@drawable/rounded_edittext"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonselector"
+                android:layout_margin="10dip"
+                android:text="Send" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

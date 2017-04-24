@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#D8D8D8"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".MainActivity1" >
+
+        <EditText
+            android:id="@+id/et_address_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_subject_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_address_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Subject" />
+
+        <EditText
+            android:id="@+id/et_message_id"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@+id/et_subject_id"
+            android:layout_below="@+id/et_subject_id"
+            android:layout_marginTop="70dp"
+            android:ems="10"
+            android:hint="Message"
+            android:inputType="textMultiLine"
+            android:text="" />
+
+        <Button
+            android:id="@+id/bt_send_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_message_id"
+            android:background="@drawable/buttonselector"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:text="SEND" />
+
+        <Button
+            android:id="@+id/bt_attach_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonselector"
+            android:layout_alignLeft="@+id/et_subject_id"
+            android:layout_below="@+id/et_subject_id"
+            android:text="Attachment" />
+
+        <TextView
+            android:id="@+id/tv_attach_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bt_attach_id"
+            android:layout_alignBottom="@+id/bt_attach_id"
+            android:layout_toRightOf="@+id/bt_attach_id"
+            android:text=""
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</ScrollView>
